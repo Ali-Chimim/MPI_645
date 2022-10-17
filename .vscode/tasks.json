@@ -1,0 +1,30 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "shell",
+			"label": "Générer avec mpic++",
+			"command": "mpic++",
+			"args": [
+				"-g",
+				"${workspaceFolder}/src/*.c",
+				"${workspaceFolder}/src/output/*.c",
+				"${workspaceFolder}/src/matrix/*.c",
+				"${workspaceFolder}/src/solver/*.c",
+				"-o",
+				"${workspaceFolder}/lab1",
+				"-Wall",
+				"-fPIC",
+				"-m64",
+				"-O3",
+				"-std=c++14",
+				"-fpermissive"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"problemMatcher": [],
+		}
+	]
+}
